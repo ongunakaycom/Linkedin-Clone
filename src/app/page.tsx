@@ -58,7 +58,7 @@ const Header = () => {
             <span>Notifications</span>
           </li>
           <li className="flex flex-col items-center cursor-pointer">
-            <Image src="/images/picture.jpeg" alt="Profile" width={30} height={30} className="rounded-full" />
+            <Image src="/picture.jpeg" alt="Profile" width={30} height={30} className="rounded-full" />
             <span>Me <FaCaretDown /></span>
           </li>
           <li className="flex flex-col items-center cursor-pointer">
