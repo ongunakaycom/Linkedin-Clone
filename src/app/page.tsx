@@ -5,11 +5,10 @@ import Image from "next/image";
 import { FaSearch, FaHome, FaUserFriends, FaSuitcase, FaEnvelope, FaBell, FaCaretDown, FaTh, FaBars } from "react-icons/fa";
 import './header.css'; // Importing the header styles
 
-
-const Header = () => {
-  const [isClient, setIsClient] = useState(false);
-  const [isFocused, setIsFocused] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Header: React.FC = () => {
+  const [isClient, setIsClient] = useState<boolean>(false);
+  const [isFocused, setIsFocused] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
     setIsClient(true); // Ensures this runs only on the client side
@@ -43,7 +42,7 @@ const Header = () => {
       {/* Mobile Menu Icon */}
       <button
         className="d-lg-none btn btn-link"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        onClick={() => setIsMenuOpen(prevState => !prevState)}
       >
         <FaBars size={24} className="text-white" />
       </button>
