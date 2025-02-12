@@ -19,7 +19,7 @@ const Header: React.FC = () => {
 
   return (
     <Navbar id="main-header" bg="dark" variant="dark" fixed="top" expand="lg" className="p-3">
-      <Container fluid>
+      <Container className="header-container">
         {/* Logo and Search Bar */}
         <div className="d-flex align-items-center gap-3">
           {/* Logo */}
@@ -96,9 +96,9 @@ const Header: React.FC = () => {
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Button variant="primary" className="fw-bold">
-                Try Premium Free for 1 Month
-              </Button>
+            <Nav.Link className="premium-button">
+              Try Premium Free for 1 Month
+            </Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

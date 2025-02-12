@@ -98,3 +98,20 @@ header .nav-items .premium-button {
     text-align: center;
   }
 }
+
+.premium-button {
+  color: #d3d2a1;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Button on mobile */
+@media (max-width: 768px) {
+  header .nav-items .premium-button {
+    width: 100%; /* Full width button on smaller screens */
+    text-align: center;
+  }
+}
