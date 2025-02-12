@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaSearch, FaHome, FaUserFriends, FaSuitcase, FaEnvelope, FaBell, FaCaretDown, FaTh, FaBars } from "react-icons/fa";
+import './header.css'; // Importing the header styles
+
 
 const Header = () => {
   const [isClient, setIsClient] = useState(false);
