@@ -1,9 +1,10 @@
-"use client"; // Add this at the top of the file
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaSearch, FaHome, FaUserFriends, FaSuitcase, FaEnvelope, FaBell, FaCaretDown, FaTh, FaBars } from "react-icons/fa";
-import './header.css'; // Importing the header styles
+import { Container, Nav, Navbar, Form, InputGroup, Button } from "react-bootstrap"; // Import Bootstrap components
+import './header.css';
 
 const Header: React.FC = () => {
   const [isClient, setIsClient] = useState<boolean>(false);
@@ -11,14 +12,15 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
-    setIsClient(true); // Ensures this runs only on the client side
+    setIsClient(true);
   }, []);
 
-  if (!isClient) return null; // Avoid rendering on the server to prevent mismatch
+  if (!isClient) return null;
 
   return (
-    <header id="main-header" className="bg-[#283c4a] p-3 d-flex justify-content-between align-items-center mx-auto w-100" style={{ fontFamily: "'Source Sans Pro', sans-serif", fontSize: "13px" }}>
-      <div className="container">
+    <Navbar id="main-header" bg="dark" variant="dark" fixed="top" expand="lg" className="p-3">
+      <Container fluid>
+        {/* Logo and Search Bar */}
         <div className="d-flex align-items-center gap-3">
           {/* Logo */}
           <div style={{ width: "40px", height: "40px", position: "relative" }}>
@@ -26,80 +28,82 @@ const Header: React.FC = () => {
           </div>
 
           {/* Search Bar */}
-          <div className="input-group">
-            <span className="input-group-text bg-light">
+          <InputGroup className="search-bar">
+            <InputGroup.Text className="bg-light">
               <FaSearch className="text-muted" />
-            </span>
-            <input
+            </InputGroup.Text>
+            <Form.Control
               type="text"
-              className="form-control"
               placeholder="Search"
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
             />
-          </div>
+          </InputGroup>
         </div>
 
-        {/* Mobile Menu Icon */}
-        <button
-          className="d-lg-none btn btn-link"
-          onClick={() => setIsMenuOpen(prevState => !prevState)}
+        {/* Mobile Menu Toggle Button */}
+        <Navbar.Toggle
+          aria-controls="navbar-nav"
+          className="d-lg-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <FaBars size={24} className="text-white" />
-        </button>
+        </Navbar.Toggle>
 
-        {/* Navigation */}
-        <nav className={`d-flex flex-column flex-lg-row align-items-center justify-content-center gap-4 d-none d-lg-flex ${isMenuOpen ? "d-block" : "d-none"} d-lg-flex`}>
-          <ul className="nav">
-            <li className="nav-item text-center">
-              <a href="#" className="nav-link text-white">
+        {/* Navigation Menu */}
+        <Navbar.Collapse id="navbar-nav" className={`justify-content-end ${isMenuOpen ? "show" : ""}`}>
+          <Nav className="align-items-center gap-4">
+            <Nav.Item>
+              <Nav.Link href="#" className="text-white text-center">
                 <FaHome className="fs-5" />
                 <div>Home</div>
-              </a>
-            </li>
-            <li className="nav-item text-center">
-              <a href="#" className="nav-link text-white">
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#" className="text-white text-center">
                 <FaUserFriends className="fs-5" />
                 <div>My Network</div>
-              </a>
-            </li>
-            <li className="nav-item text-center">
-              <a href="#" className="nav-link text-white">
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#" className="text-white text-center">
                 <FaSuitcase className="fs-5" />
                 <div>Jobs</div>
-              </a>
-            </li>
-            <li className="nav-item text-center">
-              <a href="#" className="nav-link text-white">
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#" className="text-white text-center">
                 <FaEnvelope className="fs-5" />
                 <div>Messaging</div>
-              </a>
-            </li>
-            <li className="nav-item text-center">
-              <a href="#" className="nav-link text-white">
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#" className="text-white text-center">
                 <FaBell className="fs-5" />
                 <div>Notifications</div>
-              </a>
-            </li>
-            <li className="nav-item text-center">
-              <a href="#" className="nav-link text-white">
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#" className="text-white text-center">
                 <Image src="/picture.jpeg" alt="Profile" width={30} height={30} className="rounded-circle" />
                 <div>Me <FaCaretDown /></div>
-              </a>
-            </li>
-            <li className="nav-item text-center">
-              <a href="#" className="nav-link text-white">
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#" className="text-white text-center">
                 <FaTh className="fs-5" />
                 <div>Work <FaCaretDown /></div>
-              </a>
-            </li>
-            <li className="nav-item text-center">
-              <a href="#" className="text-primary fw-bold">Try Premium Free for 1 Month</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Button variant="primary" className="fw-bold">
+                Try Premium Free for 1 Month
+              </Button>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
