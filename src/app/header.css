@@ -5,6 +5,7 @@ header#main-header {
   width: 100vw;
   display: flex;
   justify-content: center;
+  align-items: flex-end; /* Align items to the bottom */
   z-index: 1;
 }
 
@@ -13,18 +14,14 @@ header#main-header > .container {
   padding-left: 24px;
   padding-right: 40px;
   display: flex;
-  align-items: center;
+  align-items: flex-end; /* Align items to the bottom */
   justify-content: space-between;
-}
-
-header .logo img {
-  width: 40px; /* Logo size */
-  height: 40px;
 }
 
 header .nav-items {
   display: flex;
   gap: 15px;
+  align-items: flex-end; /* Align items to the bottom */
 }
 
 header .nav-items li {
@@ -58,17 +55,17 @@ header .search-bar input {
 }
 
 @media (max-width: 768px) {
-header#main-header > .container {
-  flex-direction: column;
-  align-items: flex-start;
-}
+  header#main-header > .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-header .logo img {
-  width: 30px;
-  height: 30px;
-}
+  header .logo img {
+    width: 30px;
+    height: 30px;
+  }
 
-header .search-bar input {
-  width: 100%;
-}
+  header .search-bar input {
+    width: 100%;
+  }
 }

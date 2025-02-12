@@ -49,51 +49,51 @@ const Header: React.FC = () => {
         </button>
 
         {/* Navigation */}
-        <nav className={`d-flex flex-column flex-lg-row align-items-center gap-4 ${isMenuOpen ? "d-block" : "d-none"} d-lg-flex`}>
+        <nav className={`d-flex flex-column flex-lg-row align-items-center justify-content-center gap-4 d-none d-lg-flex ${isMenuOpen ? "d-block" : "d-none"} d-lg-flex`}>
           <ul className="nav">
-            <li className="nav-item text-center mx-2">
+            <li className="nav-item text-center">
               <a href="#" className="nav-link text-white">
                 <FaHome className="fs-5" />
                 <div>Home</div>
               </a>
             </li>
-            <li className="nav-item text-center mx-2">
+            <li className="nav-item text-center">
               <a href="#" className="nav-link text-white">
                 <FaUserFriends className="fs-5" />
                 <div>My Network</div>
               </a>
             </li>
-            <li className="nav-item text-center mx-2">
+            <li className="nav-item text-center">
               <a href="#" className="nav-link text-white">
                 <FaSuitcase className="fs-5" />
                 <div>Jobs</div>
               </a>
             </li>
-            <li className="nav-item text-center mx-2">
+            <li className="nav-item text-center">
               <a href="#" className="nav-link text-white">
                 <FaEnvelope className="fs-5" />
                 <div>Messaging</div>
               </a>
             </li>
-            <li className="nav-item text-center mx-2">
+            <li className="nav-item text-center">
               <a href="#" className="nav-link text-white">
                 <FaBell className="fs-5" />
                 <div>Notifications</div>
               </a>
             </li>
-            <li className="nav-item text-center mx-2">
+            <li className="nav-item text-center">
               <a href="#" className="nav-link text-white">
                 <Image src="/picture.jpeg" alt="Profile" width={30} height={30} className="rounded-circle" />
                 <div>Me <FaCaretDown /></div>
               </a>
             </li>
-            <li className="nav-item text-center mx-2">
+            <li className="nav-item text-center">
               <a href="#" className="nav-link text-white">
                 <FaTh className="fs-5" />
                 <div>Work <FaCaretDown /></div>
               </a>
             </li>
-            <li className="nav-item text-center mx-2">
+            <li className="nav-item text-center">
               <a href="#" className="text-primary fw-bold">Try Premium Free for 1 Month</a>
             </li>
           </ul>
