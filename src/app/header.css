@@ -1,12 +1,20 @@
-/* header.css */
-header {
-  background-color: #283c4a; /* Header background color */
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
+header#main-header {
+  height: 52px;
+  position: fixed;
+  background: #283c4a;
+  width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  z-index: 1;
+}
+
+header#main-header > .container {
+  width: 1188px;
+  padding-left: 24px;
+  padding-right: 40px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 header .logo img {
@@ -50,22 +58,17 @@ header .search-bar input {
 }
 
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  header .nav-items {
-    flex-direction: column;
-    gap: 10px;
-  }
+header#main-header > .container {
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-  header .logo img {
-    width: 30px;
-    height: 30px;
-  }
+header .logo img {
+  width: 30px;
+  height: 30px;
+}
 
-  header .search-bar input {
-    width: 100%;
-  }
+header .search-bar input {
+  width: 100%;
+}
 }
