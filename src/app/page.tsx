@@ -1,19 +1,24 @@
-'use client';
+"use client";
 
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { useState } from 'react';
 import { FaBars, FaSearch, FaComments, FaHome, FaUserFriends, FaSuitcase, FaEnvelope, FaBell, FaCaretDown, FaTh } from 'react-icons/fa';
 
 const Header = () => {
-  if (typeof window === 'undefined') return null; // Ensure safe execution in SSR environments
-  
+  const [isClient, setIsClient] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
 
+  useEffect(() => {
+    setIsClient(true); // Ensures this runs only on the client side
+  }, []);
+
+  if (!isClient) return null; // Avoid rendering on the server to prevent mismatch
+
   return (
-    <header id="main-header" className="bg-white shadow-md p-4 flex justify-between items-center">
+    <header className="bg-white shadow-md p-4 flex justify-between items-center">
       <div className="flex items-center gap-4">
         {/* Logo */}
-        <Image src="/images/linkedin.png" alt="LinkedIn" width={40} height={40} />
+        <Image src="/images/linkedin.png" alt="LinkedIn" width={40} height={40} priority />
         
         {/* Search Bar */}
         <div className="relative flex items-center border rounded-md px-2">
