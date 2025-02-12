@@ -18,7 +18,7 @@ const Header = () => {
     <header className="bg-white shadow-md p-4 flex justify-between items-center">
       <div className="flex items-center gap-4">
         {/* Logo */}
-        <Image src="/images/linkedin.png" alt="LinkedIn" width={40} height={40} priority />
+        <Image src="/linkedin.png" alt="LinkedIn" width={40} height={40} priority />
         
         {/* Search Bar */}
         <div className="relative flex items-center border rounded-md px-2">
