@@ -1,12 +1,13 @@
-header#main-header {
+/* Main Header */
+#main-header {
   height: 52px;
   background: #283c4a;
-  width: 100%; /* Full width */
+  width: 100%;
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
-  position: fixed; /* Ensure the header stays at the top */
+  position: fixed;
   top: 0;
   left: 0;
 }
@@ -14,17 +15,18 @@ header#main-header {
 /* Container for header content */
 header .header-container {
   width: 100%;
-  max-width: 1188px; /* Fixed width for the container */
-  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1188px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between; /* Space out search bar and nav items */
+  justify-content: space-between;
   align-items: center;
-  padding-left: 24px; /* Add left padding */
-  padding-right: 24px; /* Add right padding */
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
+/* Search Bar */
 header .search-bar {
-  width: 300px; /* Adjust search bar width */
+  width: 300px;
   display: flex;
   align-items: center;
 }
@@ -36,10 +38,11 @@ header .search-bar input {
   padding-bottom: 5px;
   font-family: "Source Sans Pro", sans-serif;
   border: none;
-  border-radius: 4px; /* Add rounded corners */
-  width: 100%; /* Ensure input takes full width of the search bar */
+  border-radius: 4px;
+  width: 100%;
 }
 
+/* Navigation Items */
 header .nav-items {
   display: flex;
   gap: 15px;
@@ -50,14 +53,14 @@ header .nav-items li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer; /* Indicate clickable items */
+  cursor: pointer;
 }
 
 header .nav-items li span {
   color: #fff;
   font-size: 13px;
   font-family: "Source Sans Pro", sans-serif;
-  margin-top: 4px; /* Add spacing between icon and text */
+  margin-top: 4px;
 }
 
 header .nav-items li svg {
@@ -67,38 +70,44 @@ header .nav-items li svg {
 
 /* Premium Button */
 header .nav-items .premium-button {
-  background-color: #0a66c2; /* LinkedIn's primary color */
+  background-color: #0a66c2;
   color: #fff;
   border: none;
   padding: 8px 16px;
-  border-radius: 24px; /* Rounded button */
+  border-radius: 24px;
   font-weight: bold;
   cursor: pointer;
+  font-size: 13px;
+  text-align: center;
+  line-height: 1.2;
 }
 
+/* Media Query for Smaller Screens */
 @media (max-width: 768px) {
   header .header-container {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: flex-start; /* Align items to the start */
-    padding: 10px; /* Adjust padding for smaller screens */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
   }
 
   header .search-bar {
-    width: 100%; /* Full width for search bar on smaller screens */
+    width: 100%;
   }
 
   header .nav-items {
-    flex-direction: column; /* Stack nav items vertically */
-    align-items: flex-start; /* Align items to the start */
-    gap: 10px; /* Reduce gap for smaller screens */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   header .nav-items .premium-button {
-    width: 100%; /* Full width button on smaller screens */
+    width: 100%;
     text-align: center;
+    padding: 10px;
   }
 }
 
+/* Additional Styling for Premium Button Text */
 .premium-button {
   color: #d3d2a1;
   font-weight: 400;
@@ -108,10 +117,7 @@ header .nav-items .premium-button {
   line-height: 1.2;
 }
 
-/* Button on mobile */
-@media (max-width: 768px) {
-  header .nav-items .premium-button {
-    width: 100%; /* Full width button on smaller screens */
-    text-align: center;
-  }
+/* General Navigation Item Text */
+.nav-item-text {
+  font-size: 13px;
 }

@@ -52,47 +52,47 @@ const Header: React.FC = () => {
 
         {/* Navigation Menu */}
         <Navbar.Collapse id="navbar-nav" className={`justify-content-end ${isMenuOpen ? "show" : ""}`}>
-          <Nav className="align-items-center gap-4">
+          <Nav className="align-items-center gap-1">
             <Nav.Item>
               <Nav.Link href="#" className="text-white text-center">
                 <FaHome className="fs-5" />
-                <div>Home</div>
+                <div className="nav-item-text">Home</div>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#" className="text-white text-center">
                 <FaUserFriends className="fs-5" />
-                <div>My Network</div>
+                <div className="nav-item-text">My Network</div>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#" className="text-white text-center">
                 <FaSuitcase className="fs-5" />
-                <div>Jobs</div>
+                <div className="nav-item-text">Jobs</div>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#" className="text-white text-center">
                 <FaEnvelope className="fs-5" />
-                <div>Messaging</div>
+                <div className="nav-item-text">Messaging</div>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#" className="text-white text-center">
                 <FaBell className="fs-5" />
-                <div>Notifications</div>
+                <div className="nav-item-text">Notifications</div>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#" className="text-white text-center">
                 <Image src="/picture.jpeg" alt="Profile" width={30} height={30} className="rounded-circle" />
-                <div>Me <FaCaretDown /></div>
+                <div className="nav-item-text">Me <FaCaretDown /></div>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="#" className="text-white text-center">
                 <FaTh className="fs-5" />
-                <div>Work <FaCaretDown /></div>
+                <div className="nav-item-text">Work <FaCaretDown /></div>
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
