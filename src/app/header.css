@@ -1,7 +1,7 @@
 header#main-header {
   height: 52px;
   background: #283c4a;
-  width: 100vw; /* Full viewport width */
+  width: 100%; /* Full width */
   display: flex;
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
@@ -14,13 +14,13 @@ header#main-header {
 /* Container for header content */
 header .header-container {
   width: 100%;
-  max-width: 1188px; /* Adjust this value as needed */
+  max-width: 1188px; /* Fixed width for the container */
   margin: 0 auto; /* Center the container horizontally */
   display: flex;
   justify-content: space-between; /* Space out search bar and nav items */
   align-items: center;
-  padding-left: 24px; /* Add padding as needed */
-  padding-right: 40px; /* Add padding as needed */
+  padding-left: 24px; /* Add left padding */
+  padding-right: 24px; /* Add right padding */
 }
 
 header .search-bar {
