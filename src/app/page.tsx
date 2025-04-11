@@ -27,7 +27,7 @@ const Header: React.FC = () => {
           <div className="d-flex align-items-center gap-3">
             {/* Logo */}
             <div style={{ width: "40px", height: "40px", position: "relative" }}>
-              <Image src="/linkedin.png" alt="LinkedIn" fill sizes="100vw" priority />
+              <Image src="/linkedin.png" alt="LinkedIn" fill sizes="40px" priority />
             </div>
 
             {/* Search Bar */}
