@@ -3,14 +3,13 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaSearch, FaHome, FaUserFriends, FaSuitcase, FaEnvelope, FaBell, FaCaretDown, FaTh, FaBars } from "react-icons/fa";
-import { Container, Nav, Navbar, Form, InputGroup, Button } from "react-bootstrap"; // Import Bootstrap components
+import { Container, Nav, Navbar, Form, InputGroup } from "react-bootstrap"; // Import Bootstrap components
 import './header.css';
 import Content from './content'; // Import Content component
 import Footer from './footer'; // Import Footer component
 
 const Header: React.FC = () => {
   const [isClient, setIsClient] = useState<boolean>(false);
-  const [isFocused, setIsFocused] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
@@ -39,8 +38,6 @@ const Header: React.FC = () => {
               <Form.Control
                 type="text"
                 placeholder="Search"
-                onFocus={() => setIsFocused(true)}
-                onBlur={() => setIsFocused(false)}
               />
             </InputGroup>
           </div>
